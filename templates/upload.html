@@ -3,13 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload File</title>
+    <title>PepsiCo ETL Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #0056A4;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+        }
+
+        input[type="submit"] {
+            background-color: #0056A4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #003F7E;
+        }
+    </style>
 </head>
 <body>
-    <h1>Upload an Excel file</h1>
-    <form action="/process" method="post" enctype="multipart/form-data">
-        <input type="file" name="file"><br><br>
-        <input type="submit" value="Upload and Process">
-    </form>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/PepsiCo_logo.svg" alt="PepsiCo Logo">
+        <h1>Welcome to PepsiCo ETL Tool</h1>
+        <h1>(Test)</h1>
+        <p>Upload your Excel file to process the data</p>
+        <form action="/process" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <input type="submit" value="Upload and Process">
+        </form>
+    </div>
 </body>
 </html>
